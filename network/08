@@ -1,0 +1,16 @@
+At first we need to find out IP address of slash16.org.
+
+host slash16.org or nslookup slash16.org can provide this information to us.
+
+IP addresses of slash16.org:
+
+slash16.org has address 52.84.197.10
+slash16.org has address 52.84.197.41
+slash16.org has address 52.84.197.107
+slash16.org has address 52.84.197.139
+
+We can use whois 52.84.197.41 in Terminal to find out the provider by IP address.
+
+And also we can use online service ipinfo.io in browser.
+
+The provided information is the same – Provider: Amazon.
