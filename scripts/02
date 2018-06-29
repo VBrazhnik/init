@@ -1,0 +1,11 @@
+#!/bin/bash
+# Write a script which updates all the package sources, then all the packages, and then logs everything in a file named /var/log/update_script.log
+# Path of script file is /root/update.sh
+
+LOG_FILE=/var/log/update_script.log
+
+apt-get update >> $LOG_FILE
+apt-get upgrade >> $LOG_FILE
+
+# To schedule this task add entry '0 4 * * 1 /root/update.sh' in crontab file.
+# To do it you need to execute command crontab -e

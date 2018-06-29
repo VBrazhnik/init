@@ -1,0 +1,17 @@
+#!/bin/bash
+# Check /etc/crontab file
+# The path to this file must be /root/check.sh
+
+if [ -e /root/hash.md5 ]
+then
+    if ! md5sum -c /root/hash.md5
+    then
+	echo "Hash sum didn't match with previous value" | mail -s "Didn't match" root
+	md5sum /etc/crontab > /root/hash.md5
+    fi
+else
+    md5sum /etc/crontab > /root/hash.md5
+fi
+
+# To schedule this task add entry '@midnight /root/check.sh' in crontab file
+# Schedule this task for root user
