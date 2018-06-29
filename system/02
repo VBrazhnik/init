@@ -1,0 +1,1 @@
+hostname new_name
